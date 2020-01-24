@@ -1,6 +1,9 @@
 /**
  * Module dependencies.
  */
+require('@snyk/nodejs-runtime-agent')
+({projectId: '26973a17-c5e5-482b-83eb-ae62497dcc48',
+});
 
 const snyk = require('@snyk/nodejs-runtime-agent')
 snyk({
