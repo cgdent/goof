@@ -5,14 +5,14 @@ metadata:
   name: goof
 spec:
   ports:
-    - name: "3001"
-      port: 3001
-      targetPort: 3001
-      nodePort: 30001  # port exposed on localhost
-    - name: "9229"
-      port: 9229
-      targetPort: 9229
-      nodePort: 30002
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+    nodePort: 30001 #port exposed on localhost
+  - name: "9229"
+    port: 9229
+    targetPort: 9229
+    nodePort: 30002
   selector:
     app: goof
   type: LoadBalancer
@@ -24,7 +24,7 @@ kind: Deployment
 metadata:
   name: goof
 spec:
-  replicas: 3
+  replicas: 1
   strategy: {}
   template:
     metadata:
@@ -32,13 +32,13 @@ spec:
         app: goof
     spec:
       containers:
-        - image: cgdent/goofrepo
-          name: goof
-          ports:
-            - containerPort: 3001
-            - containerPort: 9229
-          resources: {}
-          env:
-            - name: "DOCKER"
-              value: "1"
+      - image: kritid04/kriti-goof
+        name: goof
+        ports:
+        - containerPort: 3001
+        - containerPort: 9229
+        resources: {}
+        env: 
+          - name: "DOCKER"
+            value: "1"
       restartPolicy: Always
