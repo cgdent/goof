@@ -1,0 +1,32 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:moment:20170905':
+    - moment:
+        reason: vulnerable function not called by application
+        expires: '2020-04-03T03:55:43.368Z'
+  'npm:moment:20161019':
+    - moment:
+        reason: vulnerable function not called by application
+        expires: '2020-04-03T03:55:43.368Z'
+  SNYK-JS-JSYAML-173999:
+    - coveralls > js-yaml:
+        reason: no patch available
+        expires: '2020-04-03T03:55:43.368Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hawk:20160119':
+    - tap > codecov.io > request > hawk:
+        patched: '2020-03-04T03:50:21.238Z'
+    - codecov.io > request > hawk:
+        patched: '2020-03-04T03:50:21.238Z'
+  'npm:hoek:20180212':
+    - coveralls > request > hawk > hoek:
+        patched: '2020-03-04T03:50:21.238Z'
+    - coveralls > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-03-04T03:50:21.238Z'
+    - coveralls > request > hawk > sntp > hoek:
+        patched: '2020-03-04T03:50:21.238Z'
+    - coveralls > request > hawk > boom > hoek:
+        patched: '2020-03-04T03:50:21.238Z'
