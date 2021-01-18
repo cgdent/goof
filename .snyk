@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.19.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:moment:20170905':
@@ -30,3 +30,36 @@ patch:
         patched: '2020-03-04T03:50:21.238Z'
     - coveralls > request > hawk > boom > hoek:
         patched: '2020-03-04T03:50:21.238Z'
+  SNYK-JS-LODASH-567746:
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > inquirer > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-config > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-01-18T06:10:18.658Z'
